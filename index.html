@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <meta charset="UTF-8" />
+
+    <title>SeedCheck</title>
+    <style>
+      #seedInput {
+        width: 100%;
+        max-width: 600;
+        height: 6rem;
+        box-sizing: border-box;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: 400;
+      }
+
+      #calculateButton {
+        display: block;
+        margin-bottom: 1rem;
+      }
+    </style>
   </head>
   <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-
-    <!-- You can also require other files to run in this process -->
+    <div style="padding: 90px">
+      <h1>Enter your seedphrase here</h1>
+      <textarea id="seedInput"></textarea>
+      <button id="calculateButton">calculate public key</button>
+      <p id="publicKeyField"></p>
+    </div>
     <script src="./renderer.js"></script>
   </body>
 </html>
