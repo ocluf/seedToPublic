@@ -90,13 +90,6 @@ const dropLeadingUserNumber = (s) => {
   }
 };
 
-function toHexString(byteArray) {
-  return Array.prototype.map
-    .call(byteArray, function (byte) {
-      return ("0" + (byte & 0xff).toString(16)).slice(-2);
-    })
-    .join("");
-}
 
 async function calculatePublicKey(seedphrase) {
   const bipWords = dropLeadingUserNumber(seedphrase).trim();
@@ -110,7 +103,7 @@ async function calculatePublicKey(seedphrase) {
   } else {
     const seed = mnemonicToSeedSync(bipWords);
     const identity = await fromSeedWithSlip0010(seed, IC_DERIVATION_PATH);
-    let values = identity.getKeyPair().publicKey.rawKey.values();
+    let values = identity.getKeyPair().publicKey.derKey.values();
     let result = "";
     for (const value of values) {
       result += value + ",";
