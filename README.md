@@ -1,9 +1,24 @@
-# seed-to-public
+# Seed-to-Public Key Checker
 
-This is a small ugly electron app I made to check the public key that comes from you Internet Identity (identity.ic0.app) seedphrase. It just puts some function together from the Internet Identity codebase.
+## Overview
 
-I can only promise that I am not trying to steal your seed phrase myself intentionally. I could have made some coding mistake or my github could have been hacked causing you seed phrase to leak. Use at your own risk. 
+**Seed-to-Public** is a straightforward Electron application designed to determine the public key derived from your Internet Identity (identity.ic0.app) seed phrase. It utilizes functions from the Internet Identity codebase to achieve this.
 
-To run from source have node and npm installed on your system and simply run:
-- npm install
-- npm start
+## Disclaimer
+
+While I assure you that there's no intentional attempt from my side to capture or misuse your seed phrase, please be aware of the potential risks:
+- The app could contain unintentional coding errors.
+- My GitHub repository might be vulnerable to external hacking, posing a risk of your seed phrase being compromised.
+  
+**Please use this tool at your own risk.**
+
+## Running the Application
+
+To run **Seed-to-Public** from the source, ensure you have Node.js and npm installed on your system. Then execute the following commands:
+
+1. Install dependencies: npm install
+2. Start the application: npm start
+
+
+This simple procedure will get the application up and running on your machine, allowing you to verify your Internet Identity seed phrase's corresponding public key.
+
